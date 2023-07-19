@@ -126,6 +126,5 @@ li {
 }
 a {
     color: #42b983;
-    font-weight: 700;
 }
 </style>
