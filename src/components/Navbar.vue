@@ -1,20 +1,22 @@
 <template>
     <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">LOGO</a>
+            <a class="navbar-brand brand-title" href="#"
+                >GBI HOUSE OF HEALING</a
+            >
             <button
                 class="navbar-toggler custom-toggler"
                 type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar"
+                aria-controls="sidebar"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div
-                class="collapse navbar-collapse align-items-center justify-content-center"
+                class="navbar-collapse align-items-center justify-content-center"
                 id="navbarNav"
             >
                 <ul class="navbar-nav">
@@ -28,6 +30,37 @@
                         <a class="nav-link text-white" href="#">{{ link }}</a>
                     </li>
                 </ul>
+            </div>
+            <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="sidebar"
+                aria-labelledby="sidebarLabel"
+            >
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title brand-title" id="sidebarTitle">
+                        GBI HOUSE OF HEALING
+                    </h5>
+                </div>
+                <div class="offcanvas-body">
+                    <ul>
+                        <li
+                            v-for="(link, index) in links"
+                            @click="activeLink = link"
+                            :key="index"
+                            :class="{ active: link === activeLink }"
+                        >
+                            <a class="nav-link text-white pd-4" href="#">{{
+                                link
+                            }}</a>
+                        </li>
+                    </ul>
+                    <div id="sidebar-logo">
+                        <img src="../assets/instagram.svg" class="px-3" />
+                        <img src="../assets/whatsapp.svg" class="px-3" />
+                        <img src="../assets/youtube.svg" class="px-3" />
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -73,10 +106,35 @@ nav {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+.offcanvas {
+    background-color: var(--bs-green);
+    text-align: left;
+}
+
+.offcanvas-start {
+    max-width: 75%;
+}
+
+.brand-title {
+    font-weight: 600;
+    color: white;
+    word-wrap: break-word;
+}
+
+#sidebar-logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* mobile zone */
 @media only screen and (min-width: 992px) {
     nav {
-        background-color: var(--bs-green);
         padding: 12px 90px;
     }
     .navbar-expand-md .navbar-nav .nav-link {
@@ -86,7 +144,6 @@ nav {
 
 @media only screen and (max-width: 992px) {
     nav {
-        background-color: var(--bs-green);
         padding: 12px 40px;
     }
     .navbar-expand-md .navbar-nav .nav-link {
@@ -96,13 +153,16 @@ nav {
 
 @media only screen and (max-width: 768px) {
     nav {
-        background-color: var(--bs-green);
         padding: 12px 16px;
     }
 
-    .navbar-expand-md .navbar-nav .nav-link {
+    .nav-link {
         line-height: 120%;
-        padding: 16px;
+        padding: 0 0 32px 0;
+    }
+
+    #navbarNav {
+        display: none;
     }
 }
 </style>
