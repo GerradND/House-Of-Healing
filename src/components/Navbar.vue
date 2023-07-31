@@ -1,9 +1,11 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand brand-title" href="#"
-                >GBI HOUSE OF HEALING</a
-            >
+            <div class="d-flex flex-row align-items-center">
+                <img src="../assets/hoh_logo.png" class="brand-logo" />
+                <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
+            </div>
+
             <button
                 class="navbar-toggler custom-toggler"
                 type="button"
@@ -118,7 +120,14 @@ nav {
 .brand-title {
     font-weight: 600;
     color: white;
-    word-wrap: break-word;
+    word-wrap: break-all;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
 }
 
 #sidebar-logo {
