@@ -1,10 +1,10 @@
 <template>
     <nav class="navbar fixed-top navbar-expand-md navbar-dark">
         <div class="container-fluid">
-            <div class="d-flex flex-row align-items-center">
+            <a class="d-flex flex-row align-items-center" href="#">
                 <img src="../assets/hoh_logo.png" class="brand-logo" />
                 <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
-            </div>
+            </a>
 
             <button
                 class="navbar-toggler custom-toggler"
@@ -40,9 +40,10 @@
                 aria-labelledby="sidebarLabel"
             >
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title brand-title" id="sidebarTitle">
-                        GBI HOUSE OF HEALING
-                    </h5>
+                    <a class="d-flex flex-row align-items-center" href="#">
+                        <img src="../assets/hoh_logo.png" class="brand-logo" />
+                        <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
+                    </a>
                 </div>
                 <div class="offcanvas-body">
                     <ul>
@@ -58,9 +59,16 @@
                         </li>
                     </ul>
                     <div id="sidebar-logo">
-                        <img src="../assets/instagram.svg" class="px-3" />
-                        <img src="../assets/whatsapp.svg" class="px-3" />
-                        <img src="../assets/youtube.svg" class="px-3" />
+                        <a href="https://www.instagram.com/gbihoh/"
+                            ><img src="../assets/instagram.svg" class="px-3"
+                        /></a>
+                        <a href="https://wa.me/552196312XXXX?text="
+                            ><img src="../assets/whatsapp.svg" class="px-3"
+                        /></a>
+                        <a
+                            href="https://www.youtube.com/channel/UCMX0cJXWmpAtanlquzeZVPA"
+                            ><img src="../assets/youtube.svg" class="px-3"
+                        /></a>
                     </div>
                 </div>
             </div>
@@ -92,6 +100,7 @@ nav {
 
 .container-fluid {
     padding: 0;
+    flex-wrap: initial;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -117,10 +126,13 @@ nav {
     max-width: 75%;
 }
 
+.offcanvas-header {
+    padding: 12px 16px;
+}
+
 .brand-title {
     font-weight: 600;
     color: white;
-    word-wrap: break-all;
     padding-left: 12px;
     text-align: left;
 }
