@@ -62,7 +62,7 @@
                         <a href="https://www.instagram.com/gbihoh/"
                             ><img src="../assets/instagram.svg" class="px-3"
                         /></a>
-                        <a href="https://wa.me/552196312XXXX?text="
+                        <a href="https://wa.me/628881547686"
                             ><img src="../assets/whatsapp.svg" class="px-3"
                         /></a>
                         <a
