@@ -4,13 +4,8 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
     name: "App",
-    components: {
-        HelloWorld,
-    },
 };
 </script>
 
@@ -20,8 +15,61 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    line-height: 150%;
+}
+
+.text-sm-1 {
+    font-size: 16px;
+}
+
+.text-sm-2 {
+    font-size: 20px;
+}
+
+.text-md {
+    font-size: 24px;
+}
+
+.text-lg-1 {
+    font-size: 38px;
+}
+
+.text-lg-2 {
+    font-size: 64px;
+}
+
+.text-lg-3 {
+    font-size: 94px;
+}
+
+@media only screen and (max-width: 768px) {
+    .text-sm-1 {
+        font-size: 12px;
+    }
+
+    .text-sm-2 {
+        font-size: 16px;
+    }
+
+    .text-md {
+        font-size: 20px;
+    }
+
+    .text-lg-1 {
+        font-size: 24px;
+    }
+
+    .text-lg-2 {
+        font-size: 32px;
+    }
+
+    .text-lg-3 {
+        font-size: 38px;
+    }
+
+    #app {
+        line-height: 120%;
+    }
 }
 
 :root {
