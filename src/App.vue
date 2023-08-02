@@ -31,7 +31,7 @@ export default {
 }
 
 .text-lg-1 {
-    font-size: 38px;
+    font-size: 40px;
 }
 
 .text-lg-2 {
@@ -64,7 +64,7 @@ export default {
     }
 
     .text-lg-3 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     #app {
