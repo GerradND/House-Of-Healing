@@ -29,7 +29,12 @@
                         :class="{ active: link === activeLink }"
                         class="nav-item"
                     >
-                        <a class="nav-link text-white" href="#">{{ link }}</a>
+                        <router-link
+                            :to="{ path: link.split(' ').join('') + 'View' }"
+                            class="nav-link text-white"
+                        >
+                            {{ link }}
+                        </router-link>
                     </li>
                 </ul>
             </div>
@@ -53,9 +58,14 @@
                             :key="index"
                             :class="{ active: link === activeLink }"
                         >
-                            <a class="nav-link text-white pd-4" href="#">{{
-                                link
-                            }}</a>
+                            <router-link
+                                :to="{
+                                    path: link.split(' ').join('') + 'View',
+                                }"
+                                class="nav-link text-white pd-4"
+                            >
+                                {{ link }}
+                            </router-link>
                         </li>
                     </ul>
                     <div id="sidebar-logo">
