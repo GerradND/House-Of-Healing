@@ -18,7 +18,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div
-                class="navbar-collapse align-items-center justify-content-center"
+                class="navbar-collapse align-items-center justify-content-end"
                 id="navbarNav"
             >
                 <ul class="navbar-nav">
@@ -103,6 +103,7 @@ export default {
 nav {
     background-color: var(--bs-green);
     padding: 12px 90px;
+    border-bottom: 0.1em solid black;
 }
 
 .active {
