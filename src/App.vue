@@ -25,7 +25,7 @@ export default {
 :root {
     --bs-green: #5c745c;
     --bs-black1: #000;
-    --bs-black2: #5c745c;
+    --bs-black2: #251f1d;
     --bs-white1: #fff;
     --bs-white2: #f1f2eb;
     --bs-brown: #978061;
