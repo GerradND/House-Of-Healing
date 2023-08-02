@@ -30,7 +30,7 @@
                         class="nav-item"
                     >
                         <router-link
-                            :to="{ path: link.split(' ').join('') + 'View' }"
+                            :to="{ path: paths[index] }"
                             class="nav-link text-white"
                         >
                             {{ link }}
@@ -60,7 +60,7 @@
                         >
                             <router-link
                                 :to="{
-                                    path: link.split(' ').join('') + 'View',
+                                    path: paths[index],
                                 }"
                                 class="nav-link text-white pd-4"
                             >
@@ -92,6 +92,7 @@ export default {
     data() {
         return {
             links: ["Home", "About Us", "Event", "Community", "FAQ"],
+            paths: ["/", "/about", "/event", "/community", "/faq"],
             activeLink: "Home",
         };
     },
