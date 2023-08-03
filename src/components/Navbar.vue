@@ -1,89 +1,96 @@
 <template>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
-        <div class="container-fluid">
-            <a class="d-flex flex-row align-items-center" href="#">
-                <img src="../assets/hoh_logo.png" class="brand-logo" />
-                <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
-            </a>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+                <a class="d-flex flex-row align-items-center" href="#">
+                    <img src="../assets/hoh_logo.png" class="brand-logo" />
+                    <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
+                </a>
 
-            <button
-                class="navbar-toggler custom-toggler"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#sidebar"
-                aria-controls="sidebar"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-                class="navbar-collapse align-items-center justify-content-end"
-                id="navbarNav"
-            >
-                <ul class="navbar-nav">
-                    <li
-                        v-for="(link, index) in links"
-                        @click="activeLink = link"
-                        :key="index"
-                        :class="{ active: link === activeLink }"
-                        class="nav-item"
-                    >
-                        <router-link
-                            :to="{ path: paths[index] }"
-                            class="nav-link text-white"
-                        >
-                            {{ link }}
-                        </router-link>
-                    </li>
-                </ul>
-            </div>
-            <div
-                class="offcanvas offcanvas-start"
-                tabindex="-1"
-                id="sidebar"
-                aria-labelledby="sidebarLabel"
-            >
-                <div class="offcanvas-header">
-                    <a class="d-flex flex-row align-items-center" href="#">
-                        <img src="../assets/hoh_logo.png" class="brand-logo" />
-                        <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
-                    </a>
-                </div>
-                <div class="offcanvas-body">
-                    <ul>
+                <button
+                    class="navbar-toggler custom-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="navbar-collapse align-items-center justify-content-end"
+                    id="navbarNav"
+                >
+                    <ul class="navbar-nav">
                         <li
                             v-for="(link, index) in links"
                             @click="activeLink = link"
                             :key="index"
                             :class="{ active: link === activeLink }"
+                            class="nav-item"
                         >
                             <router-link
-                                :to="{
-                                    path: paths[index],
-                                }"
-                                class="nav-link text-white pd-4"
+                                :to="{ path: paths[index] }"
+                                class="nav-link text-white"
                             >
                                 {{ link }}
                             </router-link>
                         </li>
                     </ul>
-                    <div id="sidebar-logo">
-                        <a href="https://www.instagram.com/gbihoh/"
-                            ><img src="../assets/instagram.svg" class="px-3"
-                        /></a>
-                        <a href="https://wa.me/628881547686"
-                            ><img src="../assets/whatsapp.svg" class="px-3"
-                        /></a>
-                        <a
-                            href="https://www.youtube.com/channel/UCMX0cJXWmpAtanlquzeZVPA"
-                            ><img src="../assets/youtube.svg" class="px-3"
-                        /></a>
+                </div>
+                <div
+                    class="offcanvas offcanvas-start"
+                    tabindex="-1"
+                    id="sidebar"
+                    aria-labelledby="sidebarLabel"
+                >
+                    <div class="offcanvas-header">
+                        <a class="d-flex flex-row align-items-center" href="#">
+                            <img
+                                src="../assets/hoh_logo.png"
+                                class="brand-logo"
+                            />
+                            <h5 class="brand-title">GBI HOUSE OF HEALING</h5>
+                        </a>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul>
+                            <li
+                                v-for="(link, index) in links"
+                                @click="activeLink = link"
+                                :key="index"
+                                :class="{ active: link === activeLink }"
+                            >
+                                <router-link
+                                    :to="{
+                                        path: paths[index],
+                                    }"
+                                    class="nav-link text-white pd-4"
+                                >
+                                    {{ link }}
+                                </router-link>
+                            </li>
+                        </ul>
+                        <div id="sidebar-logo">
+                            <a href="https://www.instagram.com/gbihoh/"
+                                ><img
+                                    src="../assets/instagram.svg"
+                                    class="px-3"
+                            /></a>
+                            <a href="https://wa.me/628881547686"
+                                ><img src="../assets/whatsapp.svg" class="px-3"
+                            /></a>
+                            <a
+                                href="https://www.youtube.com/channel/UCMX0cJXWmpAtanlquzeZVPA"
+                                ><img src="../assets/youtube.svg" class="px-3"
+                            /></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 </template>
 
 <script>
@@ -104,6 +111,12 @@ nav {
     background-color: var(--bs-green);
     padding: 12px 90px;
     border-bottom: 0.1em solid black;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .active {
