@@ -1,11 +1,16 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <NavBar />
+    <router-view />
 </template>
 
 <script>
+import NavBar from "./components/Navbar.vue";
+
 export default {
     name: "App",
+    components: {
+        NavBar,
+    },
 };
 </script>
 
@@ -85,6 +90,7 @@ export default {
 html {
     box-sizing: border-box;
     font-size: 16px;
+    overflow-y: auto;
 }
 
 *,
@@ -116,5 +122,9 @@ ul {
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
 }
 </style>
