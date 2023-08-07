@@ -127,4 +127,11 @@ img {
 a {
     text-decoration: none;
 }
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #ffffff;
+}
 </style>
