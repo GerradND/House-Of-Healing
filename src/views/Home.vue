@@ -1,8 +1,116 @@
 <template>
     <main>
-        <section class="latest-service">
+        <section
+            ref="page1"
+            class="page-1 text-white d-flex flex-column justify-content-center"
+        >
             <div class="container-fluid p-0">
-                <h2 class="text-lg-2 title text-white">Latest Service</h2>
+                <div class="pb-5">
+                    <h1 class="text-lg-3 txt-primary">
+                        RENEWING HOPE,<br />
+                        RESTORING LIVE!
+                    </h1>
+                    <h2 class="text-lg-1 txt-secondary d-inline-block">
+                        Restoration through encounter with God
+                    </h2>
+                </div>
+                <a style="width: max-content; cursor: pointer" class="d-flex">
+                    <div
+                        class="cst-button text-sm-1 text-uppercase"
+                        @click="goToSundayService"
+                    >
+                        LET'S JOIN US
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-3 text-white">
+            <div class="container-fluid p-0">
+                <h2 class="text-lg-2 title">Latest Service</h2>
                 <div class="content">
                     <vueper-slides
                         class="no-shadow"
@@ -105,11 +213,87 @@ export default {
             },
         ],
     }),
+
+    methods: {
+        goToSundayService: function () {
+            const sundayService = document.querySelector(".page-3");
+            sundayService.scrollIntoView();
+        },
+    },
 };
 </script>
 
-<style>
-.latest-service {
+<style scoped>
+main {
+    animation: fadeIn 1s linear;
+}
+
+.page-1 {
+    background-image: url("../assets/home-background.png");
+    background-size: cover;
+    min-height: 100vh;
+    padding: 80px 90px;
+    text-align: left;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.txt-primary {
+    font-weight: 700;
+    line-height: 150%; /* 141px */
+    letter-spacing: 18.8px;
+}
+
+.txt-secondary {
+    font-weight: 600;
+    line-height: 150%; /* 60px */
+    letter-spacing: 2px;
+}
+
+.page-2 {
+    height: auto;
+    padding: 80px 90px;
+    text-align: left;
+}
+
+.content-wrapper-page-2 {
+    display: flex;
+}
+
+.content-page-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0%;
+}
+
+#text-home-page-2 {
+    padding-right: 12px;
+}
+
+#image-home-page-2 {
+    padding-left: 12px;
+}
+
+.upper-text {
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.lower-text {
+    font-weight: 300;
+    line-height: 34px; /* 141.667% */
+}
+
+.page-3 {
     height: auto;
     background-color: var(--bs-green);
     padding: 80px 90px;
@@ -182,9 +366,30 @@ export default {
     border-radius: 10px;
 }
 
+.cst-button:hover {
+    background-color: var(--bs-black1);
+}
+
 @media only screen and (max-width: 992px) {
-    .latest-service {
+    .page-1,
+    .page-2,
+    .page-3 {
         padding: 72px 40px;
+    }
+
+    .content-wrapper-page-2 {
+        flex-direction: column;
+    }
+
+    #image-home-page-2 {
+        padding-left: 0px;
+        padding-bottom: 28px;
+        order: 1;
+    }
+
+    #text-home-page-2 {
+        padding-right: 0px;
+        order: 2;
     }
 
     .service-container {
@@ -198,8 +403,35 @@ export default {
 }
 
 @media only screen and (max-width: 768px) {
-    .latest-service {
+    .page-1,
+    .page-2,
+    .page-3 {
         padding: 60px 16px;
+    }
+
+    .page-1 {
+        min-height: 0;
+    }
+
+    .txt-primary {
+        line-height: 120%; /* 45.6px */
+        letter-spacing: 1.9px;
+    }
+
+    .txt-secondary {
+        padding-top: 8px;
+        font-weight: 500;
+        line-height: 120%; /* 28.8px */
+    }
+
+    .upper-text {
+        font-weight: 500;
+        line-height: 120%; /* 28.8px */
+    }
+
+    .lower-text {
+        font-weight: 300;
+        line-height: 120%; /* 19.2px */
     }
 
     .service-container {
