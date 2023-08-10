@@ -15,10 +15,76 @@
                     </h2>
                 </div>
                 <a style="width: max-content; cursor: pointer" class="d-flex">
-                    <div class="cst-button text-sm-1 text-uppercase">
+                    <div
+                        class="cst-button text-sm-1 text-uppercase"
+                        @click="goToSundayService"
+                    >
                         LET'S JOIN US
                     </div>
                 </a>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-2">
+            <div
+                class="container-fluid p-0 align-center content-wrapper-page-2"
+            >
+                <div id="text-home-page-2" class="content-page-2">
+                    <p class="upper-text text-lg-1">
+                        <b>House of Healing</b> adalah komunitas gereja yang
+                        berfokus pada pemulihan dan penyembuhan jiwa-jiwa
+                        melalui perjumpaan dengan Tuhan
+                    </p>
+                    <p class="lower-text text-md pt-3">
+                        Dalam persekutuan dan pertumbuhan rohani, kami membantu
+                        jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
+                        pengharapan baru, dan hidup dalam damai sejahtera.
+                    </p>
+                </div>
+                <div id="image-home-page-2" class="content-page-2">
+                    <img src="../assets/home-page-2.png" />
+                </div>
             </div>
         </section>
         <section class="page-2">
@@ -147,6 +213,13 @@ export default {
             },
         ],
     }),
+
+    methods: {
+        goToSundayService: function () {
+            const sundayService = document.querySelector(".page-3");
+            sundayService.scrollIntoView();
+        },
+    },
 };
 </script>
 
