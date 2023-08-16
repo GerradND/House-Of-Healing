@@ -171,7 +171,11 @@
                     <div
                         class="cst-button txt-semi green text-sm-1 text-uppercase"
                     >
-                        Ayo Bergabung!
+                        <router-link
+                            to="/community"
+                            @click="setActivePath('/community')"
+                            >Ayo Bergabung!</router-link
+                        >
                     </div>
                 </a>
             </div>
@@ -183,6 +187,7 @@
 </template>
 
 <script>
+import { setActivePath } from "@/router";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
@@ -230,6 +235,7 @@ export default {
             const sundayService = document.querySelector(".page-4");
             sundayService.scrollIntoView();
         },
+        setActivePath,
     },
 };
 </script>
