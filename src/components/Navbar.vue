@@ -1,4 +1,5 @@
 <template>
+    <!-- buat method untuk ngecekin link yang aktif sama kayak path router enggak. buat methodnya di router -->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid">
@@ -25,9 +26,11 @@
                     <ul class="navbar-nav">
                         <li
                             v-for="(link, index) in links"
-                            @click="activeLink = link"
+                            @click="setActivePath(paths[index])"
                             :key="index"
-                            :class="{ active: link === activeLink }"
+                            :class="{
+                                active: paths[index] === getActionPath().value,
+                            }"
                             class="nav-item"
                         >
                             <router-link
@@ -58,9 +61,12 @@
                         <ul>
                             <li
                                 v-for="(link, index) in links"
-                                @click="activeLink = link"
+                                @click="setActivePath(paths[index])"
                                 :key="index"
-                                :class="{ active: link === activeLink }"
+                                :class="{
+                                    active:
+                                        paths[index] === getActionPath().value,
+                                }"
                             >
                                 <router-link
                                     :to="{
@@ -94,14 +100,20 @@
 </template>
 
 <script>
+import { getActionPath, setActivePath } from "@/router";
+
 export default {
     name: "NavBar",
     data() {
         return {
             links: ["Home", "About Us", "Event", "Community", "FAQ"],
             paths: ["/", "/about", "/event", "/community", "/faq"],
-            activeLink: "Home",
         };
+    },
+
+    methods: {
+        setActivePath,
+        getActionPath,
     },
 };
 </script>
