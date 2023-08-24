@@ -23,6 +23,30 @@ export default {
     line-height: 150%;
 }
 
+.txt-light {
+    font-weight: 300;
+}
+
+.txt-regular {
+    font-weight: 400;
+}
+
+.txt-medium {
+    font-weight: 500;
+}
+
+.txt-semi {
+    font-weight: 600;
+}
+
+.txt-bold {
+    font-weight: 700;
+}
+
+.txt-black {
+    font-weight: 900;
+}
+
 .text-sm-1 {
     font-size: 16px;
 }

@@ -6,17 +6,17 @@
         >
             <div class="container-fluid p-0">
                 <div class="pb-5">
-                    <h1 class="text-lg-3 txt-primary">
+                    <h1 class="text-lg-3 txt-primary txt-bold">
                         RENEWING HOPE,<br />
                         RESTORING LIVE!
                     </h1>
-                    <h2 class="text-lg-1 txt-secondary d-inline-block">
+                    <h2 class="text-lg-1 txt-secondary txt-semi d-inline-block">
                         Restoration through encounter with God
                     </h2>
                 </div>
                 <a style="width: max-content; cursor: pointer" class="d-flex">
                     <div
-                        class="cst-button text-sm-1 text-uppercase"
+                        class="cst-button txt-semi green text-sm-1 text-uppercase"
                         @click="goToSundayService"
                     >
                         LET'S JOIN US
@@ -25,29 +25,27 @@
             </div>
         </section>
         <section class="page-2">
-            <div
-                class="container-fluid p-0 align-center content-wrapper-page-2"
-            >
-                <div id="text-home-page-2" class="content-page-2">
-                    <p class="upper-text text-lg-1">
+            <div class="container-fluid p-0 content-wrapper-page-2">
+                <div id="text-home-page-2" class="content-page">
+                    <p class="upper-text txt-regular text-lg-1">
                         <b>House of Healing</b> adalah komunitas gereja yang
                         berfokus pada pemulihan dan penyembuhan jiwa-jiwa
                         melalui perjumpaan dengan Tuhan
                     </p>
-                    <p class="lower-text text-md pt-3">
+                    <p class="lower-text txt-light text-md pt-3">
                         Dalam persekutuan dan pertumbuhan rohani, kami membantu
                         jiwa-jiwa yang terluka merasakan pemulihan, mendapatkan
                         pengharapan baru, dan hidup dalam damai sejahtera.
                     </p>
                 </div>
-                <div id="image-home-page-2" class="content-page-2">
+                <div id="image-home-page-2" class="content-page">
                     <img src="../assets/home-page-2.png" />
                 </div>
             </div>
         </section>
         <section class="page-3 text-white">
             <div class="container-fluid p-0">
-                <h2 class="text-lg-2 title">Latest Service</h2>
+                <h2 class="text-lg-2 title txt-semi">Latest Service</h2>
                 <div class="content">
                     <vueper-slides
                         class="no-shadow"
@@ -78,12 +76,12 @@
                             <template #content>
                                 <div class="service-container">
                                     <div
-                                        class="text-md sermon-title text-capitalize text-white"
+                                        class="text-md sermon-title txt-semi text-capitalize text-white"
                                     >
                                         {{ sermon.title }}
                                     </div>
                                     <div
-                                        class="speaker text-sm-1 text-capitalize mw-100 text-white"
+                                        class="speaker txt-medium text-sm-1 text-capitalize mw-100 text-white"
                                     >
                                         {{ sermon.speaker }}
                                     </div>
@@ -93,7 +91,7 @@
                                         :href="sermon.url"
                                     >
                                         <div
-                                            class="cst-button text-sm-1 text-uppercase"
+                                            class="cst-button txt-semi green text-sm-1 text-uppercase"
                                         >
                                             Watch
                                         </div>
@@ -105,10 +103,91 @@
                 </div>
             </div>
         </section>
+        <section class="page-4 d-flex">
+            <div
+                class="col d-flex justify-content-center flex-column page-4-title"
+            >
+                <h2 class="text-lg-2 txt-bold">Sunday</h2>
+                <h2 class="text-lg-2 txt-bold">Service</h2>
+                <h2 class="text-lg-2 txt-bold">Schedule</h2>
+                <h4 class="pt-3 text-md">Onsite & Streaming</h4>
+            </div>
+            <div class="col ibadah pertama">
+                <div class="pb-5">
+                    <h3 class="text-lg-1 txt-bold">IBADAH PERTAMA</h3>
+                    <div class="border-text"></div>
+                    <h2 class="text-lg-2 py-3 txt-bold">08.30 WIB</h2>
+                    <p class="text-sm-2 txt-medium">
+                        Disertai ibadah sekolah minggu & Live Streaming
+                    </p>
+                </div>
+                <a
+                    style="width: max-content; cursor: pointer"
+                    class="d-flex"
+                    href="https://www.youtube.com/channel/UCMX0cJXWmpAtanlquzeZVPA"
+                >
+                    <div
+                        class="cst-button txt-semi red d-flex align-items-center justify-content-center"
+                        style="background-color: red"
+                    >
+                        <img src="../assets/youtube.svg" />
+                        <p class="ps-2">Go Streaming</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col ibadah kedua">
+                <div class="pb-5">
+                    <h3 class="text-lg-1 txt-bold">IBADAH KEDUA</h3>
+                    <div class="border-text"></div>
+                    <h2 class="text-lg-2 py-3 txt-bold">10.30 WIB</h2>
+                    <p class="text-sm-2 txt-medium">
+                        Disertai ibadah sekolah minggu & Live Streaming
+                    </p>
+                </div>
+                <a
+                    style="width: max-content; cursor: pointer"
+                    class="d-flex"
+                    href="https://www.youtube.com/channel/UCMX0cJXWmpAtanlquzeZVPA"
+                >
+                    <div
+                        class="cst-button txt-semi red d-flex align-items-center justify-content-center"
+                        style="background-color: red"
+                    >
+                        <img src="../assets/youtube.svg" />
+                        <p class="ps-2">Go Streaming</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="page-5">
+            <div
+                id="text-home-page-5"
+                class="page-5-text-container content-page"
+            >
+                <h2 class="text-lg-2 txt-bold pb-4">
+                    Mari Bertumbuh Dalam Rohani Bersama COOL
+                </h2>
+                <a style="width: max-content; cursor: pointer" class="d-flex">
+                    <div
+                        class="cst-button txt-semi green text-sm-1 text-uppercase"
+                    >
+                        <router-link
+                            to="/community"
+                            @click="setActivePath('/community')"
+                            >Ayo Bergabung!</router-link
+                        >
+                    </div>
+                </a>
+            </div>
+            <div id="image-home-page-5" class="content-page">
+                <img class="w-100 h-100" src="../assets/cool-home-page.png" />
+            </div>
+        </section>
     </main>
 </template>
 
 <script>
+import { setActivePath } from "@/router";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
@@ -153,9 +232,10 @@ export default {
 
     methods: {
         goToSundayService: function () {
-            const sundayService = document.querySelector(".page-3");
+            const sundayService = document.querySelector(".page-4");
             sundayService.scrollIntoView();
         },
+        setActivePath,
     },
 };
 </script>
@@ -184,14 +264,10 @@ main {
 }
 
 .txt-primary {
-    font-weight: 700;
-    line-height: 150%; /* 141px */
     letter-spacing: 18.8px;
 }
 
 .txt-secondary {
-    font-weight: 600;
-    line-height: 150%; /* 60px */
     letter-spacing: 2px;
 }
 
@@ -203,9 +279,10 @@ main {
 
 .content-wrapper-page-2 {
     display: flex;
+    align-items: center;
 }
 
-.content-page-2 {
+.content-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,15 +295,14 @@ main {
 
 #image-home-page-2 {
     padding-left: 12px;
+    width: 100%;
 }
 
 .upper-text {
-    font-weight: 400;
     line-height: 48px;
 }
 
 .lower-text {
-    font-weight: 300;
     line-height: 34px; /* 141.667% */
 }
 
@@ -252,7 +328,6 @@ main {
 .title {
     display: inline-block;
     letter-spacing: 3.2px;
-    font-weight: 600;
     border-bottom: 8px solid var(--bs-brown);
     max-width: 100%;
     overflow: hidden;
@@ -272,8 +347,6 @@ main {
 
 .sermon-title {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.61);
-    font-weight: 600;
-    line-height: 150%; /* 42px */
     letter-spacing: 1.4px;
     overflow: hidden;
     display: -webkit-box;
@@ -287,7 +360,6 @@ main {
     padding: 8px 28px;
     margin: 16px 0px 20px 0px;
     border-radius: 20px;
-    font-weight: 500;
     background-color: black;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -295,23 +367,85 @@ main {
 }
 
 .cst-button {
-    background-color: var(--bs-green);
-    padding: 16px 40px;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
     width: max-content;
     border-radius: 10px;
+}
+
+.green {
+    background-color: var(--bs-green);
+    padding: 16px 40px;
+}
+
+.red {
+    background-color: red;
+    padding: 16px 24px;
 }
 
 .cst-button:hover {
     background-color: var(--bs-black1);
 }
 
+.page-4 {
+    padding: 0px 90px;
+    min-height: 100vh;
+    text-align: left;
+}
+
+.page-4-title {
+    padding: 40px 24px 40px 0px;
+}
+
+.page-4-title h2 {
+    line-height: 120%; /* 115.625% */
+}
+
+.ibadah {
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pertama {
+    background-color: var(--bs-black1);
+    color: white;
+}
+
+.kedua {
+    background-color: white;
+    color: black;
+}
+
+.border-text {
+    display: none;
+    width: 40vw;
+}
+
+.page-5 {
+    color: white;
+    height: max-content;
+    background-color: var(--bs-grey);
+    display: flex;
+}
+
+.page-5-text-container {
+    padding: 80px 90px;
+    text-align: left;
+}
+
 @media only screen and (max-width: 992px) {
     .page-1,
     .page-2,
-    .page-3 {
+    .page-3,
+    .page-5-text-container {
         padding: 72px 40px;
+    }
+
+    .page-4 {
+        padding: 0px;
+        flex-direction: column;
     }
 
     .content-wrapper-page-2 {
@@ -337,12 +471,34 @@ main {
     .content {
         padding-top: 52px;
     }
+
+    .ibadah,
+    .page-4-title {
+        padding: 40px;
+    }
+
+    .ibadah h3 {
+        display: table-caption;
+        padding-bottom: 8px;
+    }
+
+    .pertama .border-text {
+        display: block;
+        border-bottom: 8px solid white;
+    }
+
+    .kedua .border-text {
+        display: block;
+        border-bottom: 8px solid black;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .page-1,
     .page-2,
-    .page-3 {
+    .page-3,
+    .ibadah,
+    .page-4-title {
         padding: 60px 16px;
     }
 
@@ -351,24 +507,22 @@ main {
     }
 
     .txt-primary {
-        line-height: 120%; /* 45.6px */
         letter-spacing: 1.9px;
     }
 
     .txt-secondary {
         padding-top: 8px;
         font-weight: 500;
-        line-height: 120%; /* 28.8px */
     }
 
     .upper-text {
+        line-height: 120%;
         font-weight: 500;
-        line-height: 120%; /* 28.8px */
     }
 
     .lower-text {
+        line-height: 120%;
         font-weight: 300;
-        line-height: 120%; /* 19.2px */
     }
 
     .service-container {
@@ -387,6 +541,7 @@ main {
 
     .title {
         letter-spacing: 1.9px;
+        padding-bottom: 8px;
     }
 
     .speaker {
@@ -399,11 +554,12 @@ main {
         padding: 12px 20px;
     }
 
-    .sermon-title,
-    .speaker,
-    .title,
-    .cst-button {
-        line-height: 120%;
+    .page-5 {
+        flex-direction: column;
+    }
+
+    #text-home-page-5 {
+        order: 2;
     }
 }
 </style>
