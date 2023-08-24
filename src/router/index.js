@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/Home.vue";
+import CommunityView from "../views/Community.vue";
 import { ref } from "vue";
 
 const activePath = ref("/");
@@ -8,6 +9,10 @@ const routes = [
     {
         path: "/",
         component: HomeView,
+    },
+    {
+        path: "/community",
+        component: CommunityView,
     },
 ];
 
